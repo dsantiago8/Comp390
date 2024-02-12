@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{hyperref}
+
+\title{Git Tutorial: Getting Started with GitHub}
+\author{Diego Santiago}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Installing Git}
+
+To use Git locally on your machine, you need to install it. Download the installer for your operating system from \href{https://git-scm.com/downloads}{Git's official website} and follow the installation instructions.
+
+\section{Configuring Git}
+
+After installing Git, you need to configure it with your name and email address. Open a terminal or command prompt and run the following commands, replacing \texttt{Your Name} and \texttt{your.email@example.com} with your actual name and email address:
+
+\begin{verbatim}
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+\end{verbatim}
+
+\section{Creating a GitHub Account}
+
+If you haven't already, go to \href{https://github.com/}{GitHub's website} and sign up for an account. It's free!
+
+\section{Creating a Repository}
+
+Once you're logged in to GitHub, you can create a new repository by following these steps:
+
+\begin{enumerate}
+    \item Click on the "+" icon in the top right corner of the page.
+    \item Select "New repository" from the dropdown menu.
+    \item Enter a name for your repository, a description (optional), choose visibility (public or private), and initialize with a README file if needed.
+    \item Click on the "Create repository" button.
+\end{enumerate}
+
+\section{Cloning a Repository}
+
+To work with an existing repository on your local machine, you need to clone it. Go to the repository on GitHub and click on the "Code" button. Copy the URL provided.
+
+Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run the following command:
+
+\begin{verbatim}
+git clone <repository_url>
+\end{verbatim}
+
+Replace \texttt{<repository\_url>} with the URL you copied earlier.
+
+\section{Making Changes}
+
+Now that you have a local copy of the repository, you can make changes to the files in it using your preferred text editor or IDE.
+
+\section{Committing Changes}
+
+Once you've made changes to the files, you need to commit them to the repository. Open a terminal or command prompt, navigate to the repository directory, and run the following command:
+
+\begin{verbatim}
+git add .
+git commit -m "Descriptive commit message here"
+\end{verbatim}
+
+The \texttt{git add .} command stages all changes for the next commit. Replace \texttt{"Descriptive commit message here"} with a brief but informative message describing the changes you've made.
+
+\section{Pushing Changes}
+
+After committing your changes locally, you need to push them to the remote repository on GitHub. Run the following command:
+
+\begin{verbatim}
+git push origin master
+\end{verbatim}
+
+This command pushes the committed changes from your local \texttt{master} branch to the remote repository.
+
+\section{Pulling Changes}
+
+If changes have been made to the remote repository by other collaborators, you can pull those changes to your local repository. Run the following command:
+
+\begin{verbatim}
+git pull origin master
+\end{verbatim}
+
+This command fetches the changes from the remote \texttt{master} branch and merges them into your local repository.
+
+\section{Branching}
+
+Branching allows you to work on new features or fixes without affecting the main codebase. To create a new branch, run the following command:
+
+\begin{verbatim}
+git checkout -b <branch_name>
+\end{verbatim}
+
+Replace \texttt{<branch\_name>} with the name of your new branch. You can then make changes and commit them to this branch without affecting the \texttt{master} branch.
+
+\section{Merging}
+
+Once you've finished working on a feature or fix in a separate branch, you can merge it back into the \texttt{master} branch. First, switch to the \texttt{master} branch:
+
+\begin{verbatim}
+git checkout master
+\end{verbatim}
+
+Then, merge the changes from your branch into \texttt{master}:
+
+\begin{verbatim}
+git merge <branch_name>
+\end{verbatim}
+
+If there are conflicts during the merge, Git will notify you. You can resolve the conflicts by editing the conflicting files manually. After resolving the conflicts, add the files and commit the changes.
+
+\section{Stashing}
+
+If you need to switch branches but you're not ready to commit your changes, you can stash them. Stashing takes everything in your working directory -- that is, your modified tracked files and staged changes -- and saves it on a stack of unfinished changes that you can reapply at any time.
+
+To stash your changes, run the following command:
+
+\begin{verbatim}
+git stash
+\end{verbatim}
+
+To apply the most recent stash, run:
+
+\begin{verbatim}
+git stash apply
+\end{verbatim}
+
+
+\section{Collaborating with Others}
+
+GitHub facilitates collaboration by allowing multiple developers to work on the same project. You can invite collaborators to your repository and manage their access permissions from the repository settings.
+
+To collaborate on a project:
+
+\begin{enumerate}
+    \item Share the repository's URL with your collaborators.
+    \item Collaborators can clone the repository, make changes, commit them, and push them to GitHub.
+    \item Use pull requests to review and discuss changes before merging them into the main codebase.
+\end{enumerate}
+
+Congratulations! You've learned the basics of using Git and GitHub to manage your projects efficiently. As you continue to use these tools, you'll discover more advanced features and workflows to streamline your development process.
+
+\end{document}
