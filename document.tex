@@ -1,0 +1,84 @@
+\documentclass[10pt,twocolumn]{article}
+
+% use the oxycomps style file
+\usepackage{oxycomps}
+
+% usage: \fixme[comments describing issue]{text to be fixed}
+% define \fixme as not doing anything special
+\newcommand{\fixme}[2][]{#2}
+% overwrite it so it shows up as red
+\renewcommand{\fixme}[2][]{\textcolor{red}{#2}}
+% overwrite it again so related text shows as footnotes
+%\renewcommand{\fixme}[2][]{\textcolor{red}{#2\footnote{#1}}}
+
+% read references.bib for the bibtex data
+\bibliography{references}
+
+% include metadata in the generated pdf file
+\pdfinfo{
+    /Title (Tutorial Report
+    )
+    /Author (Diego Santiago)
+}
+
+% set the title and author information
+\title{Godot Engine Tutorial: Enhancing Cognitive Processes through Game Development}
+\author{Diego Santiago}
+\affiliation{Occidental College}
+\email{dsantiago@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+My comprehensive project (comps) is centered around the development of a video game designed to enhance cognitive processes such as reflexes, reaction times, and mental rotations in the player base. While the tutorial I followed focuses on creating a simple 2D platform game using the Godot Engine, it proved remarkably relevant to my comps topic. The Godot Engine tutorial served as a foundational resource, guiding me through the process of setting up a 2D environment, implementing various assets and textures, and incorporating game mechanics using GDScript.
+
+The primary goal of the tutorial was not only to teach the technicalities of building a 2D platform game but also to provide the skills and insights necessary for adapting these concepts to my unique project. A successful outcome, in this context, would be the ability to implement game mechanics that engage users in cognitive challenges, fostering improvement in reflexes, reaction times, and mental rotations. The tutorial serves as a stepping stone towards the realization of this goal.
+
+\section{Methods}
+Following the Godot Engine tutorial, I initiated the game development process by establishing a captivating 2D environment. This phase involved creating a visually appealing and functional backdrop designed to engage players. The tutorial's guidance on asset implementation and texture mapping proved invaluable, offering essential insights that enabled me to craft an environment conducive to cognitive challenges.
+\subsection{Deviations}
+While the tutorial primarily centered around generic game mechanics and design for a platformer, I intentionally deviated by introducing scenarios that demanded quick reflexes, rapid reaction times, and mental rotations. These deviations aligned seamlessly with the specific goals of my comps project, elevating the gaming experience beyond conventional platformers. Additionally, I fine-tuned parameters related to game physics to heighten the overall user experience, ensuring that the gameplay was both challenging and enjoyable.
+\subsection{Game Entities}
+Upon completing the setup of my 2D environment, I delved into the crucial customization of the player's character, encompassing animations, behaviors, and meticulous consideration of how the character's design would either support or hinder the cognitive improvement objectives of the project.
+
+To create a realistic and interactive player character, I applied the "2D Body" attribute to the character object. This not only facilitated accurate collision detection with other game elements but also paved the way for implementing game mechanics requiring precise spatial interactions. For instance, cognitive challenges involved navigating the character through a maze, where the nuanced collision handling played a pivotal role in calculating responses to user input.
+
+Extending beyond the player character, I introduced simple "spherical" objects within the game and assigned the same collision attribute as the player character. While these game elements may seem basic, they serve as obstacles for the player to overcome or dodge, effectively improving the user's reaction time. In future iterations, a thoughtful redesign of these enemy entities will further enhance the gaming experience, adding complexity to the cognitive challenges presented.
+\subsection{User Input Integration}
+Notably, Godot Engine's user-friendly environment streamlined the incorporation of user input from both mouse and keyboard. The engine's intuitive design and GDScript functionality made it remarkably easy to capture and interpret user actions, providing a flawless integration of controls into the game. This feature will significantly contribute to the project's success, ensuring a smooth and responsive interaction between players and the cognitive challenges embedded in the game.
+\subsection{Cognitive Challenges Algorithm}
+In implementing the cognitive challenges, I integrated an algorithm to enhance the complexity of scenarios and stimulate cognitive processes. For instance, the algorithm governing enemy movement patterns involved randomization within predefined bounds, ensuring unpredictability and demanding quick decision-making from players. The algorithm for maze generation employed recursive techniques to create intricate layouts, continually testing and refining the player's mental rotation and spatial awareness skills.
+
+Moreover, the algorithm determining the appearance and disappearance of game entities added an element of dynamic unpredictability, requiring players to adapt rapidly to changing scenarios. These algorithmic intricacies contribute to the cognitive load, fostering a challenging yet engaging environment for users.
+
+In summary, the success of the project is intricately linked not only to creative design and customization but also to the thoughtful integration of algorithms. These algorithmic details will play a pivotal role in shaping the cognitive challenges presented within the game, ensuring a dynamic and stimulating experience for players. The customization of character animations and behaviors surpassed mere aesthetic considerations; it represents a strategic integration of design elements, collision handling mechanisms, and game mechanics using GDScript. This holistic approach aims not only to craft an entertaining game but also to fulfill the cognitive improvement objectives outlined in my comps project. 
+
+
+\section{Metrics and Results}
+The success of my comps project will be gauged by the effectiveness of the embedded cognitive challenges within the game. Key metrics include user response time, accuracy in mental rotations, and the overall enhancement of cognitive skills observed over repeated gameplay sessions.
+
+In the event of project success, initial results from user testing should indicate positive outcomes. Players are expected to demonstrate increased proficiency in the targeted cognitive processes, as evidenced by reduced response times and improved accuracy in mental rotations. That being said, players will undergo testing before engaging with the game, and these pre-game test results will be compared to post-game test results. Moreover, assessments conducted after a substantial period will help evaluate the long-term impact of the game on cognitive skills.
+
+In evaluating the project's effectiveness, it is essential to consider the duration players spend immersed in the game. A longer engagement period suggests not only initial interest but sustained interest over time. This metric provides valuable insights into the game's ability to captivate and maintain the attention of players, indicating its potential for long-term impact on cognitive skills.
+
+Therefore, alongside traditional metrics such as user response time and cognitive skill improvement, the duration of player engagement serves as an additional indicator of the project's success. A compelling and enduring user experience contributes to the overall effectiveness and significance of the game in achieving its intended goal.
+
+The comprehensive understanding gained from the tutorial, combined with the tailored adaptations made during the project, will serve as a solid foundation for creating a game that effectively meets these metrics to address and improve targeted cognitive processes.
+
+
+\section{Reflection}
+Watching the Godot Engine tutorial has been an enriching experience that significantly contributed to my comps project. It provided a solid foundation for 2D game development and equipped me with the skills necessary to create an engaging and purposeful gaming experience.
+
+As I reflect on the tutorial's impact on my comps project, I feel a sense of confidence in the chosen direction and the potential positive influence of the developed game on cognitive functions. The tutorial acted as a springboard for my creativity and problem-solving abilities, offering a structured framework that allowed me to explore and expand on the core concepts presented.
+
+However, with this newfound confidence comes a set of concerns. While the tutorial facilitated a solid technical understanding, the real challenge lies in tailoring the game to effectively achieve its cognitive enhancement goals across diverse user demographics. It underscores the need for further user testing and iterative refinement to ensure the game's efficacy in delivering meaningful cognitive improvements.
+
+In contemplating the overall experience, the Godot Engine tutorial served as more than just an instructional manual. It acted as a catalyst for creative exploration, prompting me to think critically about how to balance engaging game mechanics with purposeful cognitive challenges. The process of adapting these newfound skills to my unique project emphasized the importance of harmonizing entertainment value with the overarching goals of the project.
+
+Looking forward, constant fine-tuning and user feedback will be instrumental in addressing lingering concerns and ensuring the success of my comps project. The tutorial, while laying the technical groundwork, highlighted the value of adaptability and the need for a personalized touch in the development process. As I navigate the challenges ahead, the lessons learned from this tutorial will remain highly relevant, guiding me in creating a game that not only captivates players but also contributes meaningfully to their cognitive well-being.
+\label{sec:paper}
+
+
+\end{document}
